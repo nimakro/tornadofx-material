@@ -2,6 +2,7 @@ package eu.nimakro.tornadofx.material
 
 import eu.nimakro.tornadofx.material.style.MaterialStyle
 import javafx.application.Application
+import javafx.stage.Screen
 import tornadofx.*
 
 /**
@@ -10,10 +11,12 @@ import tornadofx.*
 
 class Main: App(MainView::class, MaterialStyle::class)
 
-
 class MainView: View("Test") {
     override val root = vbox {
-        button("TEST")
+        paddingAll = 32
+        spacing = 16.0
+        button("Cancel")
+        button("Confirm")
     }
 }
 

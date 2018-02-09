@@ -5,11 +5,13 @@ import javafx.animation.Interpolator
 import javafx.beans.property.ObjectProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.scene.Group
+import javafx.scene.Node
 import javafx.scene.control.Button
 import javafx.scene.layout.StackPane
 import javafx.scene.paint.Color
 import javafx.scene.paint.Paint
 import javafx.scene.shape.Circle
+import javafx.scene.shape.Rectangle
 import javafx.util.Duration
 import tornadofx.*
 
@@ -22,39 +24,34 @@ const val RIPPLE_FADE_OUT_DURATION = 400.0
  * Created by amish on 6/19/17.
  */
 class MaterialButtonSkin(button: Button) : ButtonSkin(button) {
-
-    val renderer = RippleRenderer()
+    private val renderer = RippleRenderer(skinnable)
 
     init {
-        val container = StackPane(renderer)
         // add listeners to the button and bind properties
         skinnable.setOnMousePressed {  e ->
             renderer.render(e.x, e.y, computeRippleRadius(button.layoutBounds.width, button.layoutBounds.height))
-            //println("$e Pressed")
         }
-        val clipNode = StackPane()
-        clipNode.shape = skinnable.shape
-        clipNode.resize(button.width - button.snappedRightInset() - button.snappedLeftInset(),
-                button.height - button.snappedBottomInset() - button.snappedTopInset())
-        //clipNode.relocate(button.layoutBounds.minX, button.layoutBounds.minY)
-        //renderer.clip = clipNode
 
-        // add rippel effect to the container
+        // add ripple effect to the container
         //children[0].isMouseTransparent = true
         children.add(0, renderer)
     }
 
-    fun computeRippleRadius(width: Double, height: Double): Double {
+    private fun computeRippleRadius(width: Double, height: Double): Double {
         val width2 = width * width
         val height2 = height * height
         return Math.min(Math.sqrt(width2 + height2), RIPPLE_MAX_RADIUS) * 1.1 + 5
     }
 }
 
-class RippleRenderer : Group() {
-
+class RippleRenderer(private val clipNode: Node) : Group() {
     init {
-        // 1. set clip
+        clip = Rectangle().apply {
+            clipNode.layoutBoundsProperty().addListener { _, _, value ->
+                width = value.width
+                height = value.height
+            }
+        }
     }
 
     fun render(x: Double, y: Double, radius: Double) {

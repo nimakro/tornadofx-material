@@ -7,7 +7,7 @@ import tornadofx.*
  * The color pallet's are from the Material Design spec.
  * See https://www.google.com/design/spec/style/color.html
  */
-class Palette {
+class BasePalette {
 
     companion object {
         private fun c(color: Color, opacity: Double): Color = Color(color.red, color.green, color.blue, opacity)
@@ -27,134 +27,6 @@ class Palette {
         val lightFocused       = c(white, 0.12)
 
 
-        //-- Red
-        val red50 = c("#ffebee")
-        val red100 = c("#ffcdd2")
-        val red200 = c("#ef9a9a")
-        val red300 = c("#e57373")
-        val red400 = c("#ef5350")
-        val red500 = c("#f44336")
-        val red600 = c("#e53935")
-        val red700 = c("#d32f2f")
-        val red800 = c("#c62828")
-        val red900 = c("#b71c1c")
-        val redA100 = c("#ff8a80")
-        val redA200 = c("#ff5252")
-        val redA400 = c("#ff1744")
-        val redA700 = c("#d50000")
-
-        //-- Red-Contrast
-        val redContrast50   = darkPrimaryText
-        val redContrast100  = darkPrimaryText
-        val redContrast200  = darkPrimaryText
-        val redContrast300  = darkPrimaryText
-        val redContrast400  = darkPrimaryText
-        val redContrast500  = lightPrimaryText
-        val redContrast600  = lightPrimaryText
-        val redContrast700  = lightPrimaryText
-        val redContrast800  = lightPrimaryText
-        val redContrast900  = lightPrimaryText
-        val redContrastA100 = darkPrimaryText
-        val redContrastA200 = lightPrimaryText
-        val redContrastA400 = lightPrimaryText
-        val redContrastA700 = lightPrimaryText
-
-
-        //-- Pink
-        val pink50   = c("#fce4ec")
-        val pink100  = c("#f8bbd0")
-        val pink200  = c("#f48fb1")
-        val pink300  = c("#f06292")
-        val pink400  = c("#ec407a")
-        val pink500  = c("#e91e63")
-        val pink600  = c("#d81b60")
-        val pink700  = c("#c2185b")
-        val pink800  = c("#ad1457")
-        val pink900  = c("#880e4f")
-        val pinkA100 = c("#ff80ab")
-        val pinkA200 = c("#ff4081")
-        val pinkA400 = c("#f50057")
-        val pinkA700 = c("#c51162")
-
-        //-- Pink-Contrast
-        val pinkContrast50   = darkPrimaryText
-        val pinkContrast100  = darkPrimaryText
-        val pinkContrast200  = darkPrimaryText
-        val pinkContrast300  = darkPrimaryText
-        val pinkContrast400  = darkPrimaryText
-        val pinkContrast500  = lightPrimaryText
-        val pinkContrast600  = lightPrimaryText
-        val pinkContrast700  = lightPrimaryText
-        val pinkContrast800  = lightPrimaryText
-        val pinkContrast900  = lightPrimaryText
-        val pinkContrastA100 = darkPrimaryText
-        val pinkContrastA200 = lightPrimaryText
-        val pinkContrastA400 = lightPrimaryText
-        val pinkContrastA700 = lightPrimaryText
-
-        //-- Purple
-        val purple50   = c("#f3e5f5")
-        val purple100  = c("#e1bee7")
-        val purple200  = c("#ce93d8")
-        val purple300  = c("#ba68c8")
-        val purple400  = c("#ab47bc")
-        val purple500  = c("#9c27b0")
-        val purple600  = c("#8e24aa")
-        val purple700  = c("#7b1fa2")
-        val purple800  = c("#6a1b9a")
-        val purple900  = c("#4a148c")
-        val purpleA100 = c("#ea80fc")
-        val purpleA200 = c("#e040fb")
-        val purpleA400 = c("#d500f9")
-        val purpleA700 = c("#aa00ff")
-
-        //-- Purple-Contrast
-        val purpleContrast50   = darkPrimaryText
-        val purpleContrast100  = darkPrimaryText
-        val purpleContrast200  = darkPrimaryText
-        val purpleContrast300  = lightPrimaryText
-        val purpleContrast400  = lightPrimaryText
-        val purpleContrast500  = lightPrimaryText
-        val purpleContrast600  = lightPrimaryText
-        val purpleContrast700  = lightPrimaryText
-        val purpleContrast800  = lightPrimaryText
-        val purpleContrast900  = lightPrimaryText
-        val purpleContrastA100 = darkPrimaryText
-        val purpleContrastA200 = lightPrimaryText
-        val purpleContrastA400 = lightPrimaryText
-        val purpleContrastA700 = lightPrimaryText
-
-        // Deep-Purple
-        val deepPurple50   = c("#ede7f6")
-        val deepPurple100  = c("#d1c4e9")
-        val deepPurple200  = c("#b39ddb")
-        val deepPurple300  = c("#9575cd")
-        val deepPurple400  = c("#7e57c2")
-        val deepPurple500  = c("#673ab7")
-        val deepPurple600  = c("#5e35b1")
-        val deepPurple700  = c("#512da8")
-        val deepPurple800  = c("#4527a0")
-        val deepPurple900  = c("#311b92")
-        val deepPurpleA100 = c("#b388ff")
-        val deepPurpleA200 = c("#7c4dff")
-        val deepPurpleA400 = c("#651fff")
-        val deepPurpleA700 = c("#6200ea")
-
-        // Deep-Purple-Contrast
-        val deepPurpleContrast50   = darkPrimaryText
-        val deepPurpleContrast100  = darkPrimaryText
-        val deepPurpleContrast200  = darkPrimaryText
-        val deepPurpleContrast300  = lightPrimaryText
-        val deepPurpleContrast400  = lightPrimaryText
-        val deepPurpleContrast500  = lightPrimaryText
-        val deepPurpleContrast600  = lightPrimaryText
-        val deepPurpleContrast700  = lightPrimaryText
-        val deepPurpleContrast800  = lightPrimaryText
-        val deepPurpleContrast900  = lightPrimaryText
-        val deepPurpleContrastA100 = darkPrimaryText
-        val deepPurpleContrastA200 = lightPrimaryText
-        val deepPurpleContrastA400 = lightPrimaryText
-        val deepPurpleContrastA700 = lightPrimaryText
 
 
         //-- Indigo
@@ -317,37 +189,6 @@ class Palette {
         val tealContrastA400  = darkPrimaryText
         val tealContrastA700  = darkPrimaryText
 
-        //-- Green
-        val green50   = c("e8f5e9")
-        val green100  = c("c8e6c9")
-        val green200  = c("a5d6a7")
-        val green300  = c("81c784")
-        val green400  = c("66bb6a")
-        val green500  = c("4caf50")
-        val green600  = c("43a047")
-        val green700  = c("388e3c")
-        val green800  = c("2e7d32")
-        val green900  = c("1b5e20")
-        val greenA100 = c("b9f6ca")
-        val greenA200 = c("69f0ae")
-        val greenA400 = c("00e676")
-        val greenA700 = c("00c853")
-
-        //-- Green-Contrast
-        val greenContrast50   = darkPrimaryText
-        val greenContrast100  = darkPrimaryText
-        val greenContrast200  = darkPrimaryText
-        val greenContrast300  = darkPrimaryText
-        val greenContrast400  = darkPrimaryText
-        val greenContrast500  = darkPrimaryText
-        val greenContrast600  = lightPrimaryText
-        val greenContrast700  = lightPrimaryText
-        val greenContrast800  = lightPrimaryText
-        val greenContrast900  = lightPrimaryText
-        val greenContrastA100 = darkPrimaryText
-        val greenContrastA200 = darkPrimaryText
-        val greenContrastA400 = darkPrimaryText
-        val greenContrastA700 = darkPrimaryText
 
         //-- Light-Green
         val lightGreen50   = c("f1f8e9")
@@ -445,37 +286,6 @@ class Palette {
         val yellowContrastA400 = darkPrimaryText
         val yellowContrastA700 = darkPrimaryText
 
-        //-- Amber
-        val amber50   = c("fff8e1")
-        val amber100  = c("ffecb3")
-        val amber200  = c("ffe082")
-        val amber300  = c("ffd54f")
-        val amber400  = c("ffca28")
-        val amber500  = c("ffc107")
-        val amber600  = c("ffb300")
-        val amber700  = c("ffa000")
-        val amber800  = c("ff8f00")
-        val amber900  = c("ff6f00")
-        val amberA100 = c("ffe57f")
-        val amberA200 = c("ffd740")
-        val amberA400 = c("ffc400")
-        val amberA700 = c("ffab00")
-
-        //-- Amber-Contrast
-        val abmerContrast50   = darkPrimaryText
-        val abmerContrast100  = darkPrimaryText
-        val abmerContrast200  = darkPrimaryText
-        val abmerContrast300  = darkPrimaryText
-        val abmerContrast400  = darkPrimaryText
-        val abmerContrast500  = darkPrimaryText
-        val abmerContrast600  = darkPrimaryText
-        val abmerContrast700  = darkPrimaryText
-        val abmerContrast800  = darkPrimaryText
-        val abmerContrast900  = darkPrimaryText
-        val abmerContrastA100 = darkPrimaryText
-        val abmerContrastA200 = darkPrimaryText
-        val abmerContrastA400 = darkPrimaryText
-        val abmerContrastA700 = darkPrimaryText
 
         //-- Orange
         val orange50    = c("fff3e0")
@@ -605,36 +415,5 @@ class Palette {
         val greyContrastA400  = darkPrimaryText
         val greyContrastA700  = lightPrimaryText
 
-        // Blue-Grey
-        val blueGray50    = ("#eceff1")
-        val blueGray100   = ("#cfd8dc")
-        val blueGray200   = c("b0bec5")
-        val blueGray300   = c("90a4ae")
-        val blueGray400   = c("78909c")
-        val blueGray500   = c("607d8b")
-        val blueGray600   = c("546e7a")
-        val blueGray700   = c("455a64")
-        val blueGray800   = c("37474f")
-        val blueGray900   = c("263238")
-        val blueGrayA100  = c("cfd8dc")
-        val blueGrayA200  = c("b0bec5")
-        val blueGrayA400  = c("78909c")
-        val blueGrayA700  = c("455a64")
-
-        // Blue-Gray-Contrast
-        val blueGrayContrast50  = darkPrimaryText
-        val blueGrayContrast100  = darkPrimaryText
-        val blueGrayContrast200  = darkPrimaryText
-        val blueGrayContrast300  = darkPrimaryText
-        val blueGrayContrast400  = lightPrimaryText
-        val blueGrayContrast500  = lightPrimaryText
-        val blueGrayContrast600  = lightPrimaryText
-        val blueGrayContrast700  = lightPrimaryText
-        val blueGrayContrast800  = lightPrimaryText
-        val blueGrayContrast900  = lightPrimaryText
-        val blueGrayContrastA100  = darkPrimaryText
-        val blueGrayContrastA200  = darkPrimaryText
-        val blueGrayContrastA400  = lightPrimaryText
-        val blueGrayContrastA700  = lightPrimaryText
     }
 }

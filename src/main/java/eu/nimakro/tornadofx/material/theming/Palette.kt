@@ -74,7 +74,7 @@ class Palette {
         val pinkA100 = c("#ff80ab")
         val pinkA200 = c("#ff4081")
         val pinkA400 = c("#f50057")
-        val pinkA700 = c("c(#c51162")
+        val pinkA700 = c("#c51162")
 
         //-- Pink-Contrast
         val pinkContrast50   = darkPrimaryText

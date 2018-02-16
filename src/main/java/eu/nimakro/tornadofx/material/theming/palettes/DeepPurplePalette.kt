@@ -1,7 +1,7 @@
 package eu.nimakro.tornadofx.material.theming.palettes
 
-import eu.nimakro.tornadofx.material.theming.BasePalette.Companion.darkPrimaryText
-import eu.nimakro.tornadofx.material.theming.BasePalette.Companion.lightPrimaryText
+import eu.nimakro.tornadofx.material.theming.BasePalette.darkPrimaryText
+import eu.nimakro.tornadofx.material.theming.BasePalette.lightPrimaryText
 import tornadofx.*
 
 object DeepPurplePalette: Palette {

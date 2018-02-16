@@ -3,23 +3,23 @@ package eu.nimakro.tornadofx.material.theming.palettes
 import eu.nimakro.tornadofx.material.theming.BasePalette.darkPrimaryText
 import tornadofx.*
 
-object AmberPalette: Palette {
-    override val h50   = c("fff8e1")
-    override val h100  = c("ffecb3")
-    override val h200  = c("ffe082")
-    override val h300  = c("ffd54f")
-    override val h400  = c("ffca28")
-    override val h500  = c("ffc107")
-    override val h600  = c("ffb300")
-    override val h700  = c("ffa000")
-    override val h800  = c("ff8f00")
-    override val h900  = c("ff6f00")
-    override val hA100 = c("ffe57f")
-    override val hA200 = c("ffd740")
-    override val hA400 = c("ffc400")
-    override val hA700 = c("ffab00")
+object YellowPalette: Palette {
 
-    //-- Amber-Contrast
+    override val h50   = c("fffde7")
+    override val h100  = c("fff9c4")
+    override val h200  = c("fff59d")
+    override val h300  = c("fff176")
+    override val h400  = c("ffee58")
+    override val h500  = c("ffeb3b")
+    override val h600  = c("fdd835")
+    override val h700  = c("fbc02d")
+    override val h800  = c("f9a825")
+    override val h900  = c("f57f17")
+    override val hA100 = c("ffff8d")
+    override val hA200 = c("ffff00")
+    override val hA400 = c("ffea00")
+    override val hA700 = c("ffd600")
+
     override val contrast50   = darkPrimaryText
     override val contrast100  = darkPrimaryText
     override val contrast200  = darkPrimaryText

@@ -4,30 +4,30 @@ import eu.nimakro.tornadofx.material.theming.BasePalette.darkPrimaryText
 import eu.nimakro.tornadofx.material.theming.BasePalette.lightPrimaryText
 import tornadofx.*
 
-object GreenPalette: Palette {
-    override val h50   = c("e8f5e9")
-    override val h100  = c("c8e6c9")
-    override val h200  = c("a5d6a7")
-    override val h300  = c("81c784")
-    override val h400  = c("66bb6a")
-    override val h500  = c("4caf50")
-    override val h600  = c("43a047")
-    override val h700  = c("388e3c")
-    override val h800  = c("2e7d32")
-    override val h900  = c("1b5e20")
-    override val hA100 = c("b9f6ca")
-    override val hA200 = c("69f0ae")
-    override val hA400 = c("00e676")
-    override val hA700 = c("00c853")
+object LightGreenPalette: Palette {
 
-    //-- Green-Contrast
+    override val h50   = c("f1f8e9")
+    override val h100  = c("dcedc8")
+    override val h200  = c("c5e1a5")
+    override val h300  = c("aed581")
+    override val h400  = c("9ccc65")
+    override val h500  = c("8bc34a")
+    override val h600  = c("7cb342")
+    override val h700  = c("689f38")
+    override val h800  = c("558b2f")
+    override val h900  = c("33691e")
+    override val hA100 = c("ccff90")
+    override val hA200 = c("b2ff59")
+    override val hA400 = c("76ff03")
+    override val hA700 = c("64dd17")
+
     override val contrast50   = darkPrimaryText
     override val contrast100  = darkPrimaryText
     override val contrast200  = darkPrimaryText
     override val contrast300  = darkPrimaryText
     override val contrast400  = darkPrimaryText
     override val contrast500  = darkPrimaryText
-    override val contrast600  = lightPrimaryText
+    override val contrast600  = darkPrimaryText
     override val contrast700  = lightPrimaryText
     override val contrast800  = lightPrimaryText
     override val contrast900  = lightPrimaryText

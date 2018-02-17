@@ -46,15 +46,15 @@ class MainView: View("Test") {
             button("Basic")
             button("Primary") {
                 addClass(Button.primary)
-                type = Type.PRIMARY
+                //type = Type.PRIMARY
             }
             button("Accent") {
                 addClass(Button.accent)
-                type = Type.ACCENT
+                //type = Type.ACCENT
             }
             button("Warn") {
                 addClass(Button.warn)
-                type = Type.WARN
+                //type = Type.WARN
             }
             button("Disabled") {
                 isDisable = true

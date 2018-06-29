@@ -1,7 +1,11 @@
 package eu.nimakro.tornadofx.material.theming
 
+import eu.nimakro.tornadofx.material.style.withOpacity
+import eu.nimakro.tornadofx.material.theming.palettes.GrayPalette
 import eu.nimakro.tornadofx.material.theming.palettes.Palette
 import eu.nimakro.tornadofx.material.theming.palettes.RedPalette
+import javafx.scene.paint.Color
+import tornadofx.*
 
 interface Theme {
 
@@ -9,8 +13,8 @@ interface Theme {
     val accent: ThemePalette
     val warn: ThemePalette
     val isDark: Boolean
-    //val foreground: Any?
-    //val background: Any?
+    val foreground: Foreground
+    val background: Color
 }
 
 fun computePalette(basePalette: Palette, default: Hue = Hue.h500, lighter: Hue = Hue.h100, darker: Hue = Hue.h700): ThemePalette {
@@ -34,8 +38,8 @@ fun lightTheme(primary: ThemePalette, accent: ThemePalette, warn: ThemePalette =
         override val accent = accent
         override val warn = warn
         override val isDark = false
-        //override val foreground = null
-        //override val background = null
+        override val foreground = Foreground(Color.BLACK, Color.BLACK.withOpacity(0.87))
+        override val background = GrayPalette.h50;
     }
 }
 
@@ -45,10 +49,12 @@ fun darkTheme(primary: ThemePalette, accent: ThemePalette, warn: ThemePalette = 
         override val accent = accent
         override val warn = warn
         override val isDark = true
-        //override val background = w
-        //override val foreground = null
+        override val background = c("#303030")
+        override val foreground = Foreground(Color.WHITE, Color.WHITE)
     }
 }
+
+data class Foreground(val base: Color, val text: Color)
 
 enum class Hue {
     h100,
